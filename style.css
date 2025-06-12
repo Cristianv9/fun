@@ -186,9 +186,10 @@ a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 2;
 }
 
-/* Spinning Border where the logo goes */
+/* Spinning Border Behind Everything */
 .home-img .img-box::before,
 .home-img .img-box::after {
     content: '';
@@ -198,6 +199,7 @@ a {
     background: conic-gradient(transparent, transparent, transparent, hsl(348, 83%, 47%, 1));
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
+    z-index: 0; /* Behind everything */
 }
 
 .home-img .img-box::after {
@@ -210,6 +212,7 @@ a {
     }
 }
 
+/* White Circle Behind Logo */
 .home-img .img-box .img-item {
     position: relative;
     width: 100%;
@@ -218,18 +221,22 @@ a {
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    align-items: center;
     overflow: hidden;
+    z-index: 1;
 }
 
+/* Logo Image On Top */
 .home-img .img-box .img-item img {
-    position: absolute;
-    top: 30px;
-    display: block;
-    width: 85%;
-    object-fit: cover;
-    mix-blend-mode: lighten;
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+    top: 0;
+    mix-blend-mode: normal;
 }
+
 
 .bars-animation {
     position: absolute;

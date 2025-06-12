@@ -61,3 +61,16 @@ section:hover p {
   opacity: 1;
   max-height: 600px;
 }
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .card-header img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
