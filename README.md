@@ -1,4 +1,3 @@
 # Resources
-Google Fonts
+Mainly Youtube
 AI
-Shutter Shock
